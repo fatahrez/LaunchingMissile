@@ -23,7 +23,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let missileScene = SCNScene(named: "missile-1.scn")
+        
+        let missileNode = missileScene?.rootNode.childNode(withName: "missileNode", recursively: true)
+        
+        missileNode?.position = SCNVector3(0, 0, -0.5)
+        
+        let scene = SCNScene()
+        scene.rootNode.addChildNode(missileNode!)
         
         // Set the scene to the view
         sceneView.scene = scene

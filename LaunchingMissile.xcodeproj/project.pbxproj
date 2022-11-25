@@ -13,6 +13,14 @@
 		83D5759729310C900037364E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D5759529310C900037364E /* Main.storyboard */; };
 		83D5759929310C920037364E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D5759829310C920037364E /* Assets.xcassets */; };
 		83D5759C29310C920037364E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D5759A29310C920037364E /* LaunchScreen.storyboard */; };
+		83D575A929310D110037364E /* smoke.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 83D575A229310D100037364E /* smoke.scnp */; };
+		83D575AA29310D110037364E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D575A329310D100037364E /* smoke.png */; };
+		83D575AB29310D110037364E /* texture-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D575A429310D100037364E /* texture-1.png */; };
+		83D575AC29310D110037364E /* missile-1.scn in Resources */ = {isa = PBXBuildFile; fileRef = 83D575A529310D100037364E /* missile-1.scn */; };
+		83D575AD29310D110037364E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D575A629310D100037364E /* spark.png */; };
+		83D575AE29310D110037364E /* fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 83D575A729310D100037364E /* fire.scnp */; };
+		83D575AF29310D110037364E /* missle-texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D575A829310D110037364E /* missle-texture.png */; };
+		83D575B129311F400037364E /* Missile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D575B029311F400037364E /* Missile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +31,14 @@
 		83D5759629310C900037364E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83D5759829310C920037364E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83D5759B29310C920037364E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83D575A229310D100037364E /* smoke.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = smoke.scnp; sourceTree = "<group>"; };
+		83D575A329310D100037364E /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke.png; sourceTree = "<group>"; };
+		83D575A429310D100037364E /* texture-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "texture-1.png"; sourceTree = "<group>"; };
+		83D575A529310D100037364E /* missile-1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "missile-1.scn"; sourceTree = "<group>"; };
+		83D575A629310D100037364E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		83D575A729310D100037364E /* fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = fire.scnp; sourceTree = "<group>"; };
+		83D575A829310D110037364E /* missle-texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missle-texture.png"; sourceTree = "<group>"; };
+		83D575B029311F400037364E /* Missile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +77,14 @@
 				83D5759529310C900037364E /* Main.storyboard */,
 				83D5759829310C920037364E /* Assets.xcassets */,
 				83D5759A29310C920037364E /* LaunchScreen.storyboard */,
+				83D575A729310D100037364E /* fire.scnp */,
+				83D575A529310D100037364E /* missile-1.scn */,
+				83D575A829310D110037364E /* missle-texture.png */,
+				83D575A329310D100037364E /* smoke.png */,
+				83D575A229310D100037364E /* smoke.scnp */,
+				83D575A629310D100037364E /* spark.png */,
+				83D575A429310D100037364E /* texture-1.png */,
+				83D575B029311F400037364E /* Missile.swift */,
 			);
 			path = LaunchingMissile;
 			sourceTree = "<group>";
@@ -124,8 +148,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D5759229310C900037364E /* art.scnassets in Resources */,
+				83D575AE29310D110037364E /* fire.scnp in Resources */,
+				83D575AF29310D110037364E /* missle-texture.png in Resources */,
+				83D575AD29310D110037364E /* spark.png in Resources */,
+				83D575AB29310D110037364E /* texture-1.png in Resources */,
+				83D575AA29310D110037364E /* smoke.png in Resources */,
+				83D575AC29310D110037364E /* missile-1.scn in Resources */,
 				83D5759C29310C920037364E /* LaunchScreen.storyboard in Resources */,
 				83D5759929310C920037364E /* Assets.xcassets in Resources */,
+				83D575A929310D110037364E /* smoke.scnp in Resources */,
 				83D5759729310C900037364E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D5759429310C900037364E /* ViewController.swift in Sources */,
+				83D575B129311F400037364E /* Missile.swift in Sources */,
 				83D5759029310C900037364E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
