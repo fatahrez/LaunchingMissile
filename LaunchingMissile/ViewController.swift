@@ -25,15 +25,41 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a new scene
         let missileScene = SCNScene(named: "missile-1.scn")
         
-        let missileNode = missileScene?.rootNode.childNode(withName: "missileNode", recursively: true)
+//        let missileNode = missileScene?.rootNode.childNode(withName: "missileNode", recursively: true)
         
-        missileNode?.position = SCNVector3(0, 0, -0.5)
+//        missileNode?.position = SCNVector3(0, 0, -0.5)
+        
+        let missile = Missile(scene: missileScene!)
+        missile.name = "Missile"
+        missile.position = SCNVector3(0, 0, -4)
         
         let scene = SCNScene()
-        scene.rootNode.addChildNode(missileNode!)
-        
+        scene.rootNode.addChildNode(missile)
+                
         // Set the scene to the view
         sceneView.scene = scene
+        
+        registerTapGestureRecognizers()
+    }
+    
+    private func registerTapGestureRecognizers() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        self.sceneView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func tapped(recognizer: UITapGestureRecognizer) {
+        
+        guard let missileNode = self.sceneView.scene.rootNode
+            .childNode(withName: "Missile", recursively: true)
+        else {
+            fatalError("Missile not found")
+        }
+        
+        missileNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+        missileNode.physicsBody?.isAffectedByGravity = false
+        missileNode.physicsBody?.damping = 0.0
+        
+        missileNode.physicsBody?.applyForce(SCNVector3(0, 100, 0), asImpulse: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
