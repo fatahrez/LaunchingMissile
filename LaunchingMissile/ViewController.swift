@@ -55,6 +55,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             fatalError("Missile not found")
         }
         
+        // get the smoke node
+        guard let smokeNode = missileNode.childNode(withName: "smokeNode", recursively: true)
+        else {
+            fatalError("No smoke node found")
+        }
+        
+        smokeNode.removeAllParticleSystems()
+        
+        let fire = SCNParticleSystem(named: "fire.scnp", inDirectory: nil)
+        
+        smokeNode.addParticleSystem(fire!)
+        
         missileNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         missileNode.physicsBody?.isAffectedByGravity = false
         missileNode.physicsBody?.damping = 0.0
